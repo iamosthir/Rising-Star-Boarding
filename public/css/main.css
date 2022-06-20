@@ -1,0 +1,1300 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Cabin&family=Caveat&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
+
+:root{
+    --bg: #F2EEE5;
+    --yellow: #FFC400;
+    --choco: #4B1C0E;
+    --red: #ED1C24;
+    --blue: #40BDC8;
+}
+
+body,html{
+    background-color: var(--bg);
+}
+
+/* Loader */
+#loader{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+#loader .spinner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+/* End */
+
+/* Nav bar */
+.menu-toggle-icon{
+    margin-left: 20px;
+    font-size: 22px;
+    color: #161616;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    transition: 0.3s ease all;
+    display: none;
+    font-family: "Cabin";
+}
+.menu-toggle-icon:hover{
+    background-color: var(--choco);
+    color: white;
+}
+.top-nav{
+    background-color: var(--bg);
+}
+.navbar-brand img{
+    width: 170px;
+    height: auto;
+}
+.nav-link{
+    font-size: 18px;
+    font-family: 'Cabin';
+    color: #807F7C !important;
+    font-weight: 500;
+    margin-left: 20px;
+}
+.nav-link.active{
+    color: var(--red) !important;
+}
+.nav-link:hover{
+    color: var(--red) !important;
+}
+.top-nav::after{
+    content: "";
+    background-image: url("../image/menu_strip.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 43px;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    background-size: cover;
+    z-index: 1;
+}
+.fixed{
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    animation: smoothScroll 0.4s forwards;
+    background-color: #161616;
+    width: 100%;
+    box-shadow: 0 14px 39px rgb(0 0 0 / 20%);
+}
+@keyframes smoothScroll {
+	0% {
+		transform: translateY(-40px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+.drop-btn{
+    background-color: var(--choco);
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    color: white !important;
+    border-radius: 12px;
+    font-size: 14px;
+}
+.drop-btn:hover{
+    color: white !important;
+}
+.drop-menu{
+    background-color: var(--bg);
+    border-radius: 15px;
+    border: 0 !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.42);
+    font-family: "Bubblegum Sans";
+}
+.drop-menu li a{
+    color: #818181;
+    font-size: 20px;
+}
+.drop-menu li a:hover{
+    color: var(--red);
+    background-color: transparent;
+}
+/* End */
+
+
+/* Top Banner */
+.hero{
+    display: block;
+    width: 100%;
+    height: 689px;
+    background-image: url("../image/banner1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.hero-text{
+    margin-top: 260px;
+}
+.hero-text h4{
+    font-size: 50px;
+    max-width: 383px;
+    color: var(--choco);
+    font-family: 'Bubblegum Sans';
+    font-weight: 600;
+    min-height: 125px;
+}
+.booking-btn{
+    display: inline-block;
+    padding: 10px 35px;
+    background-color: var(--red);
+    text-decoration: none;
+    color: white;
+    font-family: 'Bubblegum Sans';
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 30px;
+    transition: 0.4s;
+    border: none;
+    outline: none;
+}
+.alert{
+    font-family: "Cabin";
+}
+.close{
+    position: absolute;
+    right: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 600;
+    top: 10px;
+}
+.booking-btn:hover{
+    color: white;
+    background-color: var(--choco);
+}
+/* End */
+
+/* About Us */
+.about{
+    padding: 55px 0 80px 0;
+}
+
+.about-img{
+    width: 80%;
+    height: auto;
+    animation: updown 4s linear infinite;
+}
+.about-text{
+    font-family: "Caveat";
+    font-size: 40px;
+    color: var(--choco);
+    max-width: 638px;
+}
+@keyframes updown {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/* End */
+
+/* Service */
+.service{
+    padding: 55px 0 80px 0;
+}
+.service-card{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 23px;
+    text-align: center;
+    position: relative;
+    transition: 0.4s all;
+    margin-bottom: 40px;
+}
+.service-card .title{
+    font-size: 25px;
+    color: var(--choco);
+    font-family: "Bubblegum Sans";
+}
+.service-card .desc{
+    font-size: 16px;
+    font-family: 'Cabin';
+    color: var(--choco);
+    margin-top: 18px;
+}
+.service-card .paw{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--red);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -15px;
+    color: white;
+    line-height: 2.4;
+}
+.service-card:hover{
+    box-shadow: 0 10px 19px rgba(0,0,0,0.16);
+    transform: translateY(-15px);
+}
+.service-card:hover > .paw{
+    background-color: var(--blue);
+}
+/* End */
+
+
+/* Choose Section */
+.choose{
+    padding: 55px 0 80px 0;
+}
+.second-bg{
+    width: 100%;
+    height: 395px;
+    background-image: url("../image/banner2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.second-bg::before{
+    content: "";
+    background-image: url("../image/menu_strip.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 43px;
+    position: absolute;
+    left: 0;
+    background-size: cover;
+    z-index: 0;
+}
+.choose-area{
+    margin-top: 65px;
+    text-align: left !important;
+}
+.choose-area h4{
+    font-size: 34px !important;
+    font-family: 'Caveat' !important;
+    color: white !important;
+    font-weight: bold !important;
+    max-width: 276px !important;
+}
+.choose-area h5{
+    font-size: 34px;
+    font-family: 'Bubblegum Sans';
+    color: var(--yellow);
+    font-weight: bold;
+    margin-top: 15px;
+}
+.map-iframe{
+    border: 3px solid rgba(75, 28, 14, 0.35);
+    border-radius: 12px;
+    box-shadow: 0 6px 21px rgba(0,0,0,0.16);
+}
+.contact-card{
+    font-family: "Cabin";
+}
+/* End */
+
+
+
+/* Pricing */
+.price-card{
+    width: 100%;
+    height: 400px;
+    background-color: var(--choco);
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.42);
+    cursor: pointer;
+    margin-bottom: 40px;
+    transition: 0.4s all;
+}
+.price-card:hover{
+    transform: translateY(-15px);
+}
+.price-card .ribbon{
+    width: 92%;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    top: 25px;
+    left: -15px;
+    border-radius: 30px;
+    border-bottom-left-radius: 0;
+    text-align: center;
+    font-size: 20px;
+    color: var(--choco);
+    font-family: 'Bubblegum Sans';
+    padding-top: 8px;
+}
+.price-card .ribbon::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 30px;
+    background-color: #8F8F8F;
+    top: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    left: 0;
+    z-index: 2;
+}
+.price-card .ribbon::after{
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+}
+.price-card .body{
+    padding: 5px 10px;
+    font-family: 'Bubblegum Sans' !important;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 28%;
+}
+.price-card .float-btn{
+    color: black;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 50%;
+    line-height: 2.4;
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.price-card:hover > .float-btn{
+    background-color: var(--red);
+    color: white;
+}
+
+.price-card .body h3{
+    font-family: "Bubblegum Sans";
+}
+.price-card .body p{
+    font-family: "Cabin";
+}
+/* End */
+
+
+/* Footer */
+.footer{
+    padding: 50px 0 20px 0;
+    background-color: white;
+}
+.footer-title{
+    color: black;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Bubblegum Sans';
+}
+.footer-about{
+    font-family: 'Cabin';
+    margin-top: 15px;
+    font-size: 18px;
+}
+.footer-menu{
+    margin-top: 15px;
+    list-style: none;
+    padding: 0;
+    font-family: "Bubblegum Sans";
+    font-size: 20px;
+}
+.footer-menu li{
+    margin-top: 20px;
+    display: block;
+    font-size: 17px;
+}
+.footer-menu li a{
+    color: black;
+    text-decoration: none;
+}
+.footer-menu li a:hover{
+    color: var(--blue);
+}
+.copyright{
+    font-size: 20px;
+    font-family: "Cabin";
+    color: #818181;
+    margin-top: 25px;
+}
+
+/* Gallery */
+.gallery{
+    background-color: white;
+    padding: 50px 0 50px 0;
+}
+.gallery-item{
+    padding: 50px 0 80px 0;
+}
+.album-card{
+    background-color: white;
+    width: 100%;
+    padding: 33px 0;
+    border-radius: 12px;
+    box-shadow: 0 9px 32px rgba(0, 0, 0, 0.51);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-bottom: 40px;
+}
+.album-card .thumb{
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 12px;
+    transition: 0.4s all;
+}
+.album-card:hover{
+    transform: scale(0.98);
+    background-color: var(--choco);
+}
+.album-card:hover > .thumb{
+    transform: rotate(8deg);
+}
+.album-card:hover > .title h4{
+    color: white;
+}
+.album-card .thumb img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.album-card .title{
+    margin-top: 40px;
+}
+.album-card .title h4{
+    font-size: 31px;
+    font-family: "Bubblegum Sans";
+}
+/* End */
+
+
+/* Mobile Menu */
+.side-menu{
+    position: fixed;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    height: 100%;
+    background-color: var(--bg);
+    z-index: 10;
+    box-shadow: 12px 2px 26px rgba(0, 0, 0, 0.20);
+    padding: 10px;
+    overflow:  auto;
+    transition: 0.4s all;
+}
+/* width */
+.side-menu::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+
+
+
+.side-menu .menu h3{
+    font-family: "BubbleGum Sans";
+}
+.side-menu.menu-open{
+    left: 0 !important;
+    transition: 0.4s all;
+}
+.side-menu-close button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 35px;
+    color: var(--choco);
+}
+.side-menu-close button:hover{
+    color: var(--red);
+}
+.side-menu .menu{
+    margin-top: 15px;
+}
+.side-menu .mobile-menu-item{
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+    font-family: 'Bubblegum Sans';
+}
+.side-menu .mobile-menu-item li{
+    margin-bottom: 20px;
+}
+.side-menu .mobile-menu-item li a{
+    font-size: 25px;
+    color: #818181;
+    text-decoration: none;
+}
+.side-menu .mobile-menu-item li a.active{
+    color: var(--red);
+}
+.side-menu .mobile-menu-item li a:hover{
+    color: var(--red);
+}
+
+.drop-btn-mobile{
+    background-color: var(--choco);
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    color: white !important;
+    border-radius: 12px;
+    font-size: 20px !important;
+}
+.drop-btn-mobile:hover{
+    color: white !important;
+}
+.drop-menu-mobile{
+    background-color: var(--bg);
+    border-radius: 15px;
+    border: 0 !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.42);
+    font-family: "Bubblegum Sans";
+}
+.drop-menu-mobile li a{
+    color: #818181;
+    font-size: 20px !important;
+}
+.drop-menu-mobile li a:hover{
+    color: var(--red);
+    background-color: transparent;
+}
+/* End */
+
+
+
+
+/* Login Page */
+.bg-05{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.login{
+    padding: 20px 0;
+}
+
+.login-form .group{
+    margin-bottom: 30px;
+}
+.login-form .group input[type=email], .login-form .group input[type=password],.login-form .group input[type=text],
+.login-form .group input[type=tel],.login-form .group input[type=number],.login-form .group select,.login-form .group input[type=date]{
+    width: 100%;
+    display: block;
+    height: 50px;
+    font-size: 20px;
+    font-family: "Bubblegum Sans";
+    padding: 0 40px;
+    color: var(--choco);
+    border-radius: 12px;
+    border: 1px solid rgba(75, 28, 14, 0.35);
+    background-color: #E9E1CD;
+    transition: 0.4s all;
+    margin-top: 25px;
+}
+
+.group select{
+    position: relative;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: var(--choco) url("data:image/svg+xml;utf8,<svg viewBox='0 0 140 140' width='24' height='24' xmlns='http://www.w3.org/2000/svg'><g><path d='m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z' fill='4B1C0E'/></g></svg>") no-repeat;
+  background-position: right 5px top 50%;
+}
+optgroup[label]{
+    color: rgb(56, 56, 56);
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.login-form .group textarea{
+    width: 100%;
+    display: block;
+    height: 120px;
+    font-size: 20px;
+    font-family: "Bubblegum Sans";
+    padding: 5px 40px;
+    color: var(--choco);
+    border-radius: 12px;
+    border: 1px solid rgba(75, 28, 14, 0.35);
+    background-color: #E9E1CD;
+    transition: 0.4s all;
+    margin-top: 25px;
+}
+.group label{
+    font-size: 25px;
+    font-family: "Bubblegum Sans";
+    color: var(--choco);
+}
+.group .remember{
+    font-family: "Cabin" !important;
+    font-size: 20px;
+    margin-left: 20px;
+    color: var(--choco);
+}
+.group .forgot-pass{
+    font-size: 20px;
+    font-family: "Cabin";
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--blue);
+}
+.login-btn{
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-family: "Bubblegum Sans";
+    font-size: 24px;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 12px;
+}
+.btn-blue{
+    background-color: var(--blue);
+}
+.btn-blue:hover{
+    background-color: #209aa5;
+    color: white;
+}
+.btn-choco{
+    background-color: var(--choco);
+}
+.btn-choco:hover{
+    background-color: #331309;
+    color: white !important;
+}
+input.is-invalid{
+    border: 1px solid var(--red) !important;
+}
+.group .invalid-feedback{
+    font-family: "Cabin";
+}
+/* End */
+
+
+
+
+/* End */
+
+/* Others */
+.seciton-title{
+    text-align: center;
+    align-items: center;
+}
+.seciton-title h4{
+    font-size: 45px;
+    font-family: 'Bubblegum Sans';
+}
+.seciton-title img{
+    margin-top: 30px;
+}
+.seciton-title p {
+    font-family: "Caveat";
+    font-size: 34px;
+    color: #818181;
+}
+.section-content{
+    margin-top: 50px;
+}
+.not-found{
+    width: 100%;
+    background-color: #efdeb9;
+    padding: 25px 35px;
+    border-radius: 18px;
+    text-align: center;
+    font-family: "Bubblegum Sans";
+}
+.not-found h4{
+    color: var(--choco);
+}
+/* End */
+
+
+/* Text Colors */
+.text-choco{
+    color: var(--choco) !important;
+}
+.text-red{
+    color: var(--red) !important;
+}
+.text-blue{
+    color: var(--blue) !important;
+}
+/* End */
+
+
+@media screen and (max-width: 1200px) {
+    .nav-link{
+        font-size: 14px !important;
+    }
+}
+
+@media screen and (max-width: 993px){
+    .top-menu-nav{
+        display: none !important;
+    }
+    .menu-toggle-icon{
+        display: block;
+    }
+}
+
+
+
+/* Dashboard */
+.swal2-popup{
+    font-family: "Bubblegum Sans" !important;
+}
+.update-btn{
+    border: none;
+    outline: none;
+    background-color: var(--blue);
+    padding: 10px 35px;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+}
+.update-btn:hover{
+    background-color: #238f99;
+}
+.dashboard{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 60px;
+}
+.dashboard .cover{
+    width: 100%;
+    height: 400px;
+    background-image: url("../image/dashboard.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.dashboard .content{
+    width: 100%;
+    margin-top: -210px;
+}
+.profile-card{
+    width: 100%;
+    padding: 32px;
+    background-color: white;
+    box-shadow: 0 6px 21px rgba(0,0,0,0.16);
+    border-radius: 12px;
+    min-height: 450px;
+    margin-bottom: 30px;
+}
+.edit-profile-btn{
+    text-decoration: none;
+    background-color: var(--blue);
+    padding: 10px 34px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s all;
+    font-size: 17px;
+    font-family: "Bubblegum Sans";
+    outline: none;
+    border: none;
+}
+.edit-profile-btn:hover{
+    color: white;
+    background-color: #209aa5;
+}
+.profile-card .user-thumb{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+.profile-card .user-basic{
+    margin-top: 25px;
+}
+.profile-card .user-basic h4{
+    font-family: "Bubblegum Sans";
+    font-size: 25px;
+    color: var(--choco);
+}
+.profile-card .user-basic p{
+    font-size: 17px;
+    font-family: "Cabin";
+    color: black;
+    margin-top: 15px;
+}
+.profile-card .user-item{
+    display: inline-block;
+    width: 40%;
+    margin-bottom: 33px;
+}
+.profile-card .user-item h4{
+    font-family: "Bubblegum Sans";
+    font-size: 25px;
+    color: var(--choco);
+}
+.profile-card .user-item p{
+    font-size: 17px;
+    font-family: "Cabin";
+    color: black;
+}
+.profile-card .header{
+    font-family: "Bubblegum Sans";
+    border-bottom: 1px solid #ABABAB;
+    padding: 5px 0;
+}
+.profile-card .header h4{
+    color: var(--choco);
+    font-size: 25px;
+}
+
+.pet-table{
+    font-family: "Bubblegum Sans";
+    margin-top: 25px;
+}
+.pet-table .pet-thumb{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.pet-table table{
+    width: 100%;
+}
+.pet-table td{
+    padding: 15px;
+
+}
+.pet-table .pet-name{
+    color: var(--choco);
+    font-size: 22px;
+}
+.sm-btn{
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 43px;
+}
+.sm-bt-choco{
+    background-color: var(--choco);
+    color: white;
+}
+.sm-bt-choco:hover{
+    color: white;
+    background-color: #331309;
+}
+.sm-bt-yellow{
+    background-color: var(--yellow);
+    color: white;
+}
+.pet-items{
+    font-family: "Bubblegum Sans";
+}
+.pet-items h6{
+    color: var(--choco);
+    font-size: 20px;
+}
+.pet-details-text{
+    font-family: "Cabin";
+}
+.bg-bg{
+    background-color: var(--bg) !important;
+}
+/* End */
+
+/* Booking History */
+.section{
+    padding: 40px 0;
+}
+.booking-history{
+    padding: 10px;
+    min-height: 400px;
+    box-shadow: 0 6px 21px rgba(0, 0, 0, 0.20);
+}
+.booking-history .header{
+    width: 100%;
+    padding: 5px;
+}
+.booking-history .header a{
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Bubblegum Sans";
+    font-size: 18px;
+    padding: 10px 35px;
+    background-color: #e5dbc5;
+    border-radius: 25px;
+    margin-right: 12px;
+    color: var(--choco);
+    
+}
+.booking-history .header a.active{
+    background-color: var(--blue);
+    color: white;
+}
+.booking-history .content{
+    margin-top: 15px;
+}
+.bg-choco{
+    background-color: var(--choco) !important;
+}
+.hs-title{
+    color: var(--choco);
+    font-family: "Bubblegum Sans";
+}
+.booking-table{
+    font-family: "Cabin";
+}
+
+.booking-details-tb thead{
+    background-color: #e5dbc5;
+    border-style: hidden;
+}
+.booking-details-tb thead tr th{
+    padding: 25px 15px;
+    color: var(--choco);
+    font-family: "Bubblegum Sans";
+}
+
+
+.booking-table thead{
+    background-color: #e5dbc5;
+    border-style: hidden;
+}
+.booking-table thead tr th{
+    padding: 25px 15px;
+    color: var(--choco);
+    font-family: "Bubblegum Sans";
+}
+
+
+
+.table-footer{
+    background-color: #e5dbc5;
+}
+.table-footer td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+.table-footer td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+.table-head th:first-child {
+    border-top-left-radius: 20px;
+}
+
+.table-head th:last-child {
+    border-top-right-radius: 20px;
+}
+.page-link{
+    width: 50px;
+    height: 50px;
+    border-radius: 50% !important;
+    margin-right: 15px;
+    font-family: "Cabin";
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.8;
+}
+.page-item.active .page-link {
+    background-color: var(--choco) !important; 
+    border: 0 !important;
+}
+.bg-orange{
+    background-color: #ff5722 !important;
+}
+.bg-orange:hover{
+    background-color: #cf3b0d !important;
+}
+.btn-back{
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Bubblegum Sans";
+    font-size: 18px;
+    padding: 10px 35px;
+    background-color: #e5dbc5;
+    border-radius: 25px;
+    margin-right: 12px;
+    color: var(--choco);
+    border: none;
+    outline: none;
+}
+.reportrange-text[data-v-4391f606] {
+    background-color: var(--bg) !important; 
+}
+/* End */
+
+
+
+/* Reservation */
+.choose{
+    width: 100%;
+    text-align: center;
+}
+.choose .thumb{
+    width: 250px;
+    height: 250px;
+    background-color: var(--choco);
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 15;
+    transition: 0.4s ease-in-out all;
+    margin: 0 auto;
+}
+.choose .thumb:hover{
+    background-color: #08727c;
+    transform: scale(0.9);
+}
+.choose .thumb img{
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
+.choose .res-btn{
+    margin-top: 35px;
+    display: inline-block;
+    color: var(--choco);
+    font-size: 22px;
+    font-family: "Bubblegum Sans";
+    text-decoration: none;
+    padding: 10px 55px;
+    border-radius: 5px;
+    transition: 0.4s ease-in-out all;
+    border: 3px solid var(--blue);
+
+}
+.choose .res-btn:hover{
+    background-color: #08727c;
+    transform: scale(0.9);
+    color: white;
+}
+.choose h4{
+    font-size: 45px;
+    font-family: "Cabin";
+    color: var(--choco);
+    margin-top: 35px;
+    font-weight: 600;
+}
+/* End */
+
+
+/* Others 2 */
+.complete-profile-box{
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    min-height: 500px;
+    border: 1px dashed var(--choco);
+    border-radius: 12px;
+}
+.modal-body{
+    font-family: "Bubblegum Sans";
+}
+/* End */
+
+
+
+/* Animation */
+.bg-faded{background-color:#f3f3f3;max-height:500px}
+.btn-round{border-radius:500px}
+.btn-round,.btn-round:hover,.btn-round:active{border-color:transparent}
+.modal.animate {opacity:0}
+.modal.animate.show {opacity:1}
+.modal.animate .modal-dialog{-webkit-transform:translate(0,0);-ms-transform: translate(0,0);transform:translate(0,0)}
+.modal.animate .a-fadeLeftBig{-webkit-animation:fadeOutLeftBig .5s;animation:fadeOutLeftBig .5s}
+    .modal.animate.show .a-fadeLeftBig{-webkit-animation:fadeInLeftBig .5s;animation:fadeInLeftBig .5s}
+.modal.animate .a-fadeRightBig{-webkit-animation:fadeOutRightBig .5s;animation:fadeOutRightBig .5s}
+    .modal.animate.show .a-fadeRightBig{-webkit-animation:fadeInRightBig .5s;animation:fadeInRightBig .5s}
+.modal.animate .a-fadeUpBig{-webkit-animation:fadeOutUpBig .5s;animation:fadeOutUpBig .5s}
+    .modal.animate.show .a-fadeUpBig{-webkit-animation:fadeInUpBig .5s;animation:fadeInUpBig .5s}
+.modal.animate .a-fadeDownBig{-webkit-animation:fadeOutDownBig .5s;animation:fadeOutDownBig .5s}
+	.modal.animate.show .a-fadeDownBig{-webkit-animation:fadeInDownBig .5s;animation:fadeInDownBig .5s}
+.modal.animate .a-fadeRight{-webkit-animation:fadeOutRight .5s;animation:fadeOutRight .5s}
+	.modal.animate.show .a-fadeRight{-webkit-animation:fadeInRight .5s;animation:fadeInRight .5s}
+.modal.animate .a-fadeLeft{-webkit-animation:fadeOutLeft .5s;animation:fadeOutLeft .5s}
+	.modal.animate.show .a-fadeLeft{-webkit-animation:fadeInLeft .5s;animation:fadeInLeft .5s}
+.modal.animate .a-fadeUp{-webkit-animation:fadeOutUp .5s;animation:fadeOutUp .5s}
+	.modal.animate.show .a-fadeUp{-webkit-animation:fadeInUp .5s;animation:fadeInUp .5s}
+.modal.animate .a-fadeDown{-webkit-animation:fadeOutDown .5s;animation:fadeOutDown .5s}
+    .modal.animate.show .a-fadeDown{-webkit-animation:fadeInDown .5s;animation:fadeInDown .5s}
+.modal.animate .a-lightSpeed{-webkit-animation:lightSpeedOut .5s;animation:lightSpeedOut .5s}
+    .modal.animate.show .a-lightSpeed {-webkit-animation:lightSpeedIn .5s;animation: lightSpeedIn .5s}
+.modal.animate .a-flipX{-webkit-animation:flipOutX .5s;animation:flipOutX .5s}
+	.modal.animate.show .a-flipX{-webkit-animation:flipInX .5s;animation:flipInX .5s}
+.modal.animate .a-flipY{-webkit-animation:flipOutY .5s;animation:flipOutY .5s}
+	.modal.animate.show .a-flipY{-webkit-animation:flipInY .5s;animation:flipInY .5s}
+.modal.animate .a-roll{-webkit-animation:rollOut .5s;animation: rollOut .5s}
+	.modal.animate.show .a-roll{-webkit-animation:rollIn .5s;animation:rollIn .5s}
+.modal.animate .a-bounce{-webkit-animation:bounceOut .5s;animation:bounceOut .5s}
+	.modal.animate.show .a-bounce{-webkit-animation:bounceIn .5s;animation:bounceIn .5s}
+.modal.animate .a-rotate{-webkit-animation:rotateOut .5s;animation:rotateOut .5s}
+	.modal.animate.show .a-rotate{-webkit-animation:rotateIn .5s;animation:rotateIn .5s}
+.modal.animate .a-zoom{-webkit-animation:zoomOut .5s;animation:zoomOut .5s}
+	.modal.animate.show .a-zoom{-webkit-animation:zoomIn .5s;animation:zoomIn .5s}
+.modal.animate .a-zoomUp{-webkit-animation:zoomOutUp .5s;animation:zoomOutUp .5s}
+	.modal.animate.show .a-zoomUp{-webkit-animation: zoomInUp .5s;animation:zoomInUp .5s}
+.modal.animate .a-zoomRight {-webkit-animation: zoomOutRight .5s;animation:zoomOutRight .5s}
+	.modal.animate.show .a-zoomRight{-webkit-animation: zoomInRight .5s;animation:zoomInRight .5s}
+.modal.animate .a-zoomDown{-webkit-animation:zoomOutDown .5s;animation:zoomOutDown .5s}
+	.modal.animate.show .a-zoomDown{-webkit-animation:zoomInDown .5s;animation:zoomInDown .5s}
+.modal.animate .a-zoomLeft{-webkit-animation:zoomOutLeft .5s;animation:zoomOutLeft .5s}
+	.modal.animate.show .a-zoomLeft{-webkit-animation:zoomInLeft .5s;animation:zoomInLeft .5s}
+/* end */
+
+
+/* Grooming Form */
+.grooming-form .group{
+    margin-bottom: 30px;
+}
+.grooming-form .multiselect__tags{
+    background-color: #e5dbc5 !important;
+    color: var(--choco);
+    font-size: 20px !important;
+    font-family: "Bubblegum Sans" !important;
+    border-radius: 12px;
+    border: 1px solid rgba(75, 28, 14, 0.35);
+    height: 50px;
+}
+.grooming-form .multiselect__input{
+    background-color: #e5dbc5 !important;
+}
+.grooming-form .vue-daterange-picker{
+    width: 100%;
+}
+.grooming-form label{
+    margin-bottom: 10px;
+}
+.custom-input{
+    width: 100%;
+    display: block;
+    height: 50px;
+    font-size: 20px;
+    font-family: "Bubblegum Sans";
+    padding: 0 40px;
+    color: var(--choco);
+    border-radius: 12px;
+    border: 1px solid rgba(75, 28, 14, 0.35);
+    background-color: #E9E1CD;
+    transition: 0.4s all;
+    margin-top: 19px;
+}
+.grooming-form .group textarea{
+    width: 100%;
+    display: block;
+    height: 80px !important;
+    font-size: 20px;
+    font-family: "Bubblegum Sans";
+    padding: 5px 40px;
+    color: var(--choco);
+    border-radius: 12px;
+    border: 1px solid rgba(75, 28, 14, 0.35);
+    background-color: #E9E1CD;
+    transition: 0.4s all;
+    margin-top: 25px;
+}
+.grooming-form .group select{
+    width: 100%;
+    display: block;
+    height: 50px;
+    font-size: 20px;
+    font-family: "Bubblegum Sans";
+    padding: 0 40px;
+    color: var(--choco);
+    border-radius: 12px;
+    border: 1px solid rgba(75, 28, 14, 0.35);
+    background-color: #E9E1CD;
+    transition: 0.4s all;
+    margin-top: 25px;
+}
+/* End */
+
+/* Booking Card */
+.booking-card{
+    background-color: var(--bg);
+    box-shadow: 0 6px 21px rgba(0, 0, 0, 0.20);
+    border-radius: 12px;
+    margin-top: 25px;
+    border: 3px solid rgba(75, 28, 14, 0.35)
+}
+.booking-card .card-header{
+    background-color: var(--bg);
+    border-radius: 12px;
+}
+.booking-card h6, .booking-card h4{
+    font-size: 20px;
+    color: var(--choco);
+    font-family: "Bubblegum Sans";
+}
+.booking-card p{
+    font-size: 18px;
+    color: #818181;
+    font-family: 'Cabin';
+}
+.ap-item{
+    border-radius: 50px !important;
+    padding: 15px 15px;
+    margin-bottom: 30px !important;
+    font-family: "Cabin";
+    background-color: #e5dbc5;
+}
+/* End */
+
+@media only screen and (max-width: 767px){
+    .hero-text h4{
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 767px){
+    .choose-area h4{
+        font-size: 28px !important;
+        max-width: 300px !important;
+    }
+    .choose-area h5{
+        font-size: 28px;
+    }
+}
+
+.form-control.is-invalid{
+    border-color: #dc3545 !important;
+}
+
+.service-off{
+    width: 100%;
+    min-height: 600px;
+    border: 3px solid var(--choco);
+    text-align: center;
+    padding: 15px;
+}
+
+.service-off h6{
+    margin-top: 25px;
+    font-size: 20px;
+}
